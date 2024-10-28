@@ -55,8 +55,8 @@ public class SetOperations {
         return result;
     }
 
-    public static <T> ArrayList<T> complement(ArrayList<T> universalSet, ArrayList<T> subset) {
-        ArrayList<T> result = new ArrayList<>();
+    public static <E> ArrayList<E> complement(ArrayList<E> universalSet, ArrayList<E> subset) {
+        ArrayList<E> result = new ArrayList<>();
 
         for (int i = 0; i < universalSet.size(); i++) {
             boolean found = false;
