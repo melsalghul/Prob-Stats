@@ -1,8 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This class provides static methods for performing set operations (union, intersection, and complement) on ArrayLists.
+ */
 public class SetOperations {
 
+    /**
+     * Demonstrates the usage of the set operation methods.
+     *
+     */
     public static void main(String[] args) {
         // Example usage with days of the week (String data type)
         ArrayList<String> allDays = new ArrayList<>(Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
@@ -23,51 +30,60 @@ public class SetOperations {
         System.out.println("Complement of setA: " + complement(allIntegers, setA));
     }
 
+
+    /**
+     * Calculates the union of two ArrayLists.
+     *
+     * @param arrayList1 The first ArrayList.
+     * @param arrayList2 The second ArrayList.
+     * @param <E>        The type of elements in the ArrayLists.
+     * @return A new ArrayList containing all unique elements from both input ArrayLists.
+     */
     public static <E> ArrayList<E> union(ArrayList<E> arrayList1, ArrayList<E> arrayList2) {
         ArrayList<E> result = new ArrayList<>(arrayList1);
 
-        for (int i = 0; i < arrayList2.size(); i++) {
-            boolean found = false;
-            for (int j = 0; j < result.size(); j++) {
-                if (arrayList2.get(i).equals(result.get(j))) {
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                result.add(arrayList2.get(i));
+        for (E element : arrayList2) {
+            if (!result.contains(element)) {
+                result.add(element);
             }
         }
         return result;
     }
 
+
+    /**
+     * Calculates the intersection of two ArrayLists.
+     *
+     * @param arrayList1 The first ArrayList.
+     * @param arrayList2 The second ArrayList.
+     * @param <E>        The type of elements in the ArrayLists.
+     * @return A new ArrayList containing the elements that are present in both input ArrayLists.
+     */
     public static <E> ArrayList<E> intersection(ArrayList<E> arrayList1, ArrayList<E> arrayList2) {
         ArrayList<E> result = new ArrayList<>();
 
-        for (int i = 0; i < arrayList1.size(); i++) {
-            for (int j = 0; j < arrayList2.size(); j++) {
-                if (arrayList1.get(i).equals(arrayList2.get(j))) {
-                    result.add(arrayList1.get(i));
-                    break; // Move to next element in arrayList1 once a match is found
-                }
+        for (E element : arrayList1) { 
+            if (arrayList2.contains(element)) {
+                result.add(element);
             }
         }
         return result;
     }
 
+    /**
+     * Calculates the complement of a subset with respect to a universal set.
+     *
+     * @param universalSet The universal set.
+     * @param subset       The subset.
+     * @param <E>          The type of elements in the ArrayLists.
+     * @return A new ArrayList containing elements present in the universal set but not in the subset.
+     */
     public static <E> ArrayList<E> complement(ArrayList<E> universalSet, ArrayList<E> subset) {
         ArrayList<E> result = new ArrayList<>();
 
-        for (int i = 0; i < universalSet.size(); i++) {
-            boolean found = false;
-            for (int j = 0; j < subset.size(); j++) {
-                if (universalSet.get(i).equals(subset.get(j))) {
-                    found = true;
-                    break; 
-                }
-            }
-            if (!found) {
-                result.add(universalSet.get(i));
+        for (E element : universalSet) {  // Use enhanced for loop.
+            if (!subset.contains(element)) {  // Use contains() for efficiency.
+                result.add(element);
             }
         }
         return result;
