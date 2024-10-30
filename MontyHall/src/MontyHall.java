@@ -7,7 +7,7 @@ public class MontyHall {
 
     /**
      * Constructor for the MontyHall class.
-     * @param isSwitched Whether the player switches doors after a goat is revealed.
+     * @param isSwitched Whether the player switches doors after the prize door is revealed.
      */
     public MontyHall(boolean isSwitched) {
         this.random = new Random();
