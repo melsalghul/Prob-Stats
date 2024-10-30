@@ -11,7 +11,7 @@ public class SetOperations {
      *
      */
     public static void main(String[] args) {
-        // Example usage with days of the week (String data type)
+        // Days of the week (String data type)
         ArrayList<String> allDays = new ArrayList<>(Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
         ArrayList<String> weekdays = new ArrayList<>(Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"));
         ArrayList<String> weekend = new ArrayList<>(Arrays.asList("Saturday", "Sunday"));
@@ -20,7 +20,7 @@ public class SetOperations {
         System.out.println("Intersection of weekdays and weekend: " + intersection(weekdays, weekend));
         System.out.println("Complement of weekdays: " + complement(allDays, weekdays));
 
-        // Example with Integer type
+        // Integer data type
         ArrayList<Integer> setA = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
         ArrayList<Integer> setB = new ArrayList<>(Arrays.asList(3, 4, 5, 6));
 
