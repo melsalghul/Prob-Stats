@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 
 /**
- * This class provides a method for calculating the probability mass function (PMF)
+ * This class is for calculating the probability mass function (PMF)
  * of a binomial distribution.
  */
 class BiDistr {
