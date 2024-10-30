@@ -9,11 +9,9 @@ public class Main {
 
     /**
      * The main method runs the Monty Hall simulation.
-     *
-     * @param args Command line arguments (not used in this program).
      */
     public static void main(String[] args) {
-        int trials = 10000; // Number of trials for the simulation
+        int trials = 10000; // Number of trials for simulation
 
         System.out.println("Without switching: " + MontyHall.run(trials, false));
         System.out.println("With switching: " + MontyHall.run(trials, true));
