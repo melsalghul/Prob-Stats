@@ -10,7 +10,6 @@ public class Main {
     /**
      * The main method that runs the Birthday simulation.
      * 
-     * @param args Command line arguments (not used in this program).
      */
     public static void main(String[] args) {
         int size = 23; // Default group size (size of class)
