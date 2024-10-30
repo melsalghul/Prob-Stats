@@ -17,11 +17,11 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of people: ");
-        size = scanner.nextInt(); // Takes user input for the group size
-        scanner.close(); // Close the scanner to release resources
+        size = scanner.nextInt(); // user input for the group size
+        scanner.close(); // Close scanner
 
         BirthdayProgram tester = new BirthdayProgram(size, runs); // Creates a BirthdayProgram object
-        double probability = tester.run(); // Runs the simulation and gets the probability
+        double probability = tester.run(); // Runs tester simulation and getsprobability
 
         System.out.println("Probability of at least 2 people sharing a birthday in a size of " + size + ": " + probability); // Prints the result
 
