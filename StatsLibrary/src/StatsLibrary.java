@@ -20,7 +20,7 @@ public class StatsLibrary {
             throw new NullPointerException("Input list cannot be null.");
         }
         if (numsList.isEmpty()) {
-            return 0; // Handle empty list to avoid division by zero
+            return 0; //avoid division by zero
         }
 
         int sum = 0;
@@ -122,7 +122,7 @@ public class StatsLibrary {
             sumOfSquares += Math.pow(num - mean, 2);
         }
 
-        return Math.sqrt(sumOfSquares / numsList.size()); // Calculate population standard deviation
+        return Math.sqrt(sumOfSquares / numsList.size());
 
     }
 }
