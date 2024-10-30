@@ -1,8 +1,8 @@
 import java.math.BigInteger;
 
 /**
- * This class provides a method for calculating combinations (nCr), also known as binomial coefficients.
- * It uses the formula n! / (r! * (n-r)!).
+ * This class is for calculating combinations (nCr).
+ * Uses the formula n! / (r! * (n-r)!).
  */
 class Comb {
 
