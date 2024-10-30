@@ -1,8 +1,8 @@
 import java.math.BigInteger;
 
 /**
- * This class provides a method for calculating permutations (nPr).
- * Permutations represent the number of ways to arrange r items from a set of n distinct items, where order matters.
+ * This class is for calculating permutations (nPr).
+ * Permutations represent number of ways to arrange r items from a set of n distinct items (order matters).
  */
 class Perm {
 
