@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 
 /**
- * This class provides a method for calculating the factorial of a non-negative integer.
+ * This class is for calculating the factorial of a non-negative integer.
  */
 class Factorial {
 
